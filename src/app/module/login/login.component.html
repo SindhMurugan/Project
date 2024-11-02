@@ -1,0 +1,67 @@
+<div class="cancel-btn" >
+    <mat-icon routerLink="/menu/home">cancel</mat-icon>
+</div>
+
+<mat-card class="card">
+    <div class="left">
+        <small style="font-size: 12px;padding-left: 18px;">Why choose Bigbasket?</small>
+        <div class="catergory">
+            <div class="login-icons">
+                <img src="assets/quality-icon.png" alt="" >
+                <small style="font-weight: 600;">Quality</small>
+            </div>
+            <div class="login-icons">
+                <img src="assets/time.jpeg" alt="" >
+                <small style="font-weight: 600;">On Time</small>
+            </div>
+            <div class="login-icons" style="padding-top: 9px">
+                <img src=" assets/Delivery-icon.png" alt="" >
+                <small style="font-weight: 600;">Return Policy</small>
+            </div>
+            <div class="login-icons">
+                <img src="assets/easy-return.jpeg" alt="" style="height: 30px;width: 30px;">
+                <small style="font-weight: 600;">Free delivery</small>
+            </div>
+
+        </div>
+
+        <div class="left-bottom">
+            <small>Find us on</small>
+            <img src="assets/playstore.jpeg" alt=""  class="find-us-logo">
+            <img src="assets/apple-logo.webp" alt=""  class="find-us-logo">
+        </div>
+
+    </div>
+    <div class="right d-flex flex-column " *ngIf="!openBetterKnowForm">
+        <mat-card-title >Login/ Sign up</mat-card-title>
+        <small class="usingOtp">Using OTP</small>
+        <form action="" #loginForm="ngForm" class="d-flex flex-column">
+            <input type="text" class="login-field"  placeholder="Enter Phone number /Email Id" name="phoneNo" ngModel required>
+            <button mat-button  (click)="submitted(loginForm)" [ngClass]="loginForm.valid ? 'continue-btn' : 'disable-btn'">continue</button>
+        </form>
+       
+        <p class="policy">By continuing, I accept TCP - bigbasket’s Terms and Conditions & Privacy Policy
+
+            This site is protected by reCAPTCHA and the Google - Privacy Policy and & Terms of Service apply.</p>
+
+    </div>
+    <div *ngIf="!isPhoneNoExits" class="right d-flex flex-column ">
+      
+            <mat-card-title>Almost there</mat-card-title>
+            <small class="usingOtp">Help us to know better</small>
+            <form action="" #knowBetterForm="ngForm" class="d-flex flex-column">
+                <div class="d-flex flex-row ">
+                    <input type="text" placeholder="First Name" class="login-field " style="width:90%;margin: 15px 10px 20px 0;" name="firstName" ngModel required>
+                    <input type="text" placeholder="Last Name" class="login-field " style="width:90%;margin: 15px 10px 20px 0;" name="lastName" ngModel required>
+                </div>
+                <input type="text" class="login-field"  placeholder="Enter Email Id" name="email" ngModel required>
+                <button mat-button  (click)="knowBetter(knowBetterForm)" [ngClass]="knowBetterForm.valid ? 'continue-btn' : 'disable-btn'">Start Shoping</button>
+            </form>
+
+     
+       
+       
+      
+    </div>
+</mat-card>
+

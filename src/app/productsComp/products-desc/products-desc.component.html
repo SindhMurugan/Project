@@ -1,0 +1,66 @@
+<div class="d-flex flex-column ">
+
+  <div class="py-4">
+    <a href="/menu/home" style="text-decoration: none;
+    color: #000000b8;"><mat-icon style="margin-bottom: -4px">home</mat-icon>Home/</a><a href="/menu/view-all"
+    style="text-decoration: none;
+    color: #000000b8;"
+    (click)="backToSmart()">Smart Basket/</a><b>Product Description</b>
+    </div>
+
+
+
+
+    <div class="productDesc-container">
+        <div class="img-left">
+            <img [src]="getValue?.productImageUrl" alt="">
+        </div>
+        <div class="desc-right">
+            <div>
+                <span><p style="margin-bottom: 0;line-height: 30px;">fresho!</p></span>
+                <span class="product-title"><p style="margin-bottom: 0;line-height: 30px;">{{getValue.productName}}</p></span>
+                <span class="product-price"><p style="margin-bottom: 0;line-height: 30px;"> Price:{{getValue.productPrice |currency :'INR'}}</p></span>
+                <span style="color: rgba(71, 111, 0, 1);"><p style="margin-bottom: 0;line-height: 30px;">You Save: <b>25% OFF</b></p></span>
+                <span><p style="margin-bottom: 0;line-height: 30px;">(inclusive of all taxes)</p></span>
+            </div>
+            
+         
+    
+    
+            
+            <div class="my-3">
+                <button mat-button class="addToBasketBtn" (click)="addedToCard(getValue)">Add to Basket</button>
+                <button mat-button class="saveForlater">Save For Later</button>
+            </div>
+    
+            <span class="product-price" >Pack sizes</span>
+    
+         <div class="kg-details">
+            <span class="product-price"><p>1Kg</p></span>
+            <span>{{getValue.productPrice |currency :'INR'}}({{getValue.productPrice |currency :'INR'}}/kg)</span>
+         </div>
+            
+        </div>
+    </div>
+    <!-- <div class="dashed"></div>
+
+    <div>
+        <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Personal data
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type your name and age
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+             
+            </mat-expansion-panel>
+            </mat-accordion>
+    </div> -->
+    
+
+</div>
+

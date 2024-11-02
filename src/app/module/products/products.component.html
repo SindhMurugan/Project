@@ -1,0 +1,43 @@
+<button *ngFor="let item of items" mat-button class="items">{{item|uppercase}}</button>
+
+
+<div class="card-container">
+    <div class="card-container-upper">
+        <p style="font-size: 20px;
+    font-weight: 500;">My Smart Basket</p>
+    <a href="" style="color: rgb(0 0 0 / 67%);" routerLink="/menu/view-all">View All</a>
+    <button mat-raised-button  (click)="previousPage()" [disabled]="previousItems"><mat-icon>keyboard_arrow_left</mat-icon></button>
+    <button mat-raised-button (click)="nextPage()" [disabled]="!hasMoreItems"><mat-icon>keyboard_arrow_right</mat-icon></button>
+
+    </div>
+    
+
+    <div class="card-style">
+        <mat-card class="card"   *ngFor="let item of  displayedItems" >
+            <div class="product-img-container">
+                <img [src]="item.productImageUrl" alt="" style="height: 120px;width: 100%;">
+            </div>
+           
+            <p class="fresho">fresho!</p>
+            <p class="title">{{item.productName}}</p>
+            <p class="price">{{item.productPrice | currency :'INR'}}</p>
+            <div class="btns">
+                <button mat-button class="save"></button>
+                <button mat-button class="add" (click)="itemAdded()" [disabled]="!(phoneNo|async)" >View</button>
+            </div>
+
+            <div class="offer-tag">
+                <span >50% off</span>
+            </div>
+    
+          
+        
+        </mat-card>
+    
+    </div>
+
+    <script>data </script>
+
+    
+</div>
+

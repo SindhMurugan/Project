@@ -1,0 +1,79 @@
+
+<div class="productsContainer">
+
+    <div class="left">
+        <div class="pb-4">
+            <a href="/menu/home" style="text-decoration: none;
+            color: #000000b8;"><mat-icon style="margin-bottom: -4px">home</mat-icon>Home/</a><b>Smart Basket</b>
+            </div>
+
+            <span  class="fontStyle" style="font-size: 1.125rem">Shop by Category </span>
+            <mat-card class="my-4">
+                <ul >
+                    <li class="category">Baby Care</li>
+                    <li class="category">Eggs, Meat & Fish</li>
+                    <li class="category">Beverages</li>
+                    <li class="category">Fruits & Vegetables</li>
+                    <li class="category">Kitchen, Garden & Pets</li>
+                    <li class="category">Snacks & Branded Foods</li>
+                </ul>
+
+            </mat-card>
+            
+        
+    </div>
+
+  
+   
+    <div>
+
+        
+        
+        
+        <div class="ms-3">
+            <div class="d-flex flex-column">
+                <span class="fontStyle">Our Recommendations For You</span>
+                <span class="Buy-product">buy these products</span>
+                <div class="red-border"></div>
+                <!-- <b style="font-size: 18px;"></b>
+                <p></p> -->
+
+            </div>
+            <div  class="card-style">
+                <mat-card class="card"   *ngFor="let item of  products" (click)="viewProductDes(item)" >
+                    <div class="product-img-container">
+                        <img [src]="item.productImageUrl" alt="" style="height: 120px;width: 100%;">
+                    </div>
+                   
+                    <p class="fresho">fresho!</p>
+                    <p class="title">{{item.productName}}</p>
+                    <p class="price">{{item.productPrice | currency :'INR'}}</p>
+                    <div class="btns">
+                        <button mat-button class="save"></button>
+                        <button mat-button class="add">View</button>
+                    </div>
+
+                    <div class="offer-tag">
+                        <span >50% off</span>
+                    </div>
+            
+                  
+                
+                </mat-card>
+
+                
+
+            </div>
+           
+        
+        
+           
+        
+        </div>
+
+    </div>
+    
+
+</div>
+
+<!-- <p>standalone</p> -->

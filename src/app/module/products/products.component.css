@@ -1,0 +1,63 @@
+.items{
+    background: #0000000d;
+    padding: 25px;
+    width: 155px;
+    margin-left: 10px;
+    margin-top: 40px;
+  
+    font-weight: 700;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+
+
+.card-container{
+    width: 90%;
+    background: #0000000d;
+    height: fit-content;
+    margin-top: 30px;
+    padding: 20px 20px 100px 20px;
+    
+}
+
+.card-container-upper{
+    display: grid;
+    grid-template-columns: 1fr repeat(3 , auto);
+    column-gap: 10px;
+}
+
+.save{
+    background-image: url('/assets/Save-Bookmark.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* font-size: 12px; */
+    background-size: 15px 15px;
+    border: 1px solid black;
+   
+
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    row-gap: 10px;
+}
+
+.add{
+    border: 1px solid red;
+    color: red !important;
+    margin-left: 65px;
+}
+
+
+
+/* .card-style{
+    display: flex;
+    gap: 10px;
+   
+} */
+
+
+

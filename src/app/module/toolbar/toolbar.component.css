@@ -1,0 +1,149 @@
+:root{
+    --white :rgb(255, 255, 255);
+    --text-opacity: 1;
+    --black:rgb(0,0,0)
+}
+
+.toolbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: fit-content;
+    width: 100%;
+    background-color:var(--white);
+    border-top: 5px solid  rgba(94, 148, 0, 1);
+    box-shadow: 0px 0px 23px 0px #00000030;
+    /* overflow: hidden; */
+    /* position: fixed; */
+}
+
+/* .removeScroll{
+    overflow: hidden;
+} */
+
+.toolbar-upper{
+    /* display: grid;
+    grid-template-columns: 100px  500px  100px  100px 50px; */
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    padding-top: 10px;
+}
+.toolbar-lower{
+    /* gap:10px; */
+    padding: 10px 0 0 0;
+    display: flex;
+}
+
+.logo{
+    height:50px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.serach-container {   
+    width: 100%;
+    height: 100%;
+    position: relative;
+   
+
+}
+
+.serach-container img{
+    position: absolute;
+    height: 50px;
+    margin-top: -4px;
+    margin-left: -8px;
+    color: rgba(94, 148, 0, 1);
+}
+
+.serach-container input{
+    padding: 2px 180px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: start;
+    border: 1px solid rgb(0 0 0 / 19%);
+
+}
+
+.location-btn{
+    width: 100%;
+    padding: 0.625rem;
+    height: 2.25rem;
+    border-radius: 0.25rem;
+    color: rgba(96, 96, 96,1);
+    text-align: left;
+    background-color: rgba(238, 238, 238,1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.category-btn{
+    width: 100%;
+    padding: 0.625rem;
+    height: 2.25rem;
+    border-radius: 0.25rem;
+    color: rgb(255, 255, 255) !important;
+    text-align: left;
+    background-color: rgba(94, 148, 0, 1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* margin-right: 20px; */
+}
+
+.login-btn{
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    border-width: 2px;
+    border-radius: 0.25rem;
+    background: black !important;
+    color: white !important;
+    font-size: 12px;
+}
+
+.menu-items-list{
+    list-style: none;
+    /* display: flex; */
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(5, 115px);
+    column-gap: 10px;
+    width: fit-content;
+}
+
+.menu-items-list li{
+    overflow: hidden; /* Hides content that overflows */
+    text-overflow: ellipsis; /* Adds ellipsis (...) when text overflows */
+    white-space: nowrap; 
+
+
+}
+
+.listMenu{
+    position: relative;
+    border-right: 1px solid rgb(0 0 0 / 19%);
+    border-radius: 0%;
+    top: -5px;
+   
+}
+.home-logo{
+    color: red !important;
+    background: #ff000021;
+}
+
+.list-menu-items{
+    list-style: none;
+    font-size: 14px;
+} 
+
+.list-menu-items li{
+    padding: 10px 19px 0 0;
+}
